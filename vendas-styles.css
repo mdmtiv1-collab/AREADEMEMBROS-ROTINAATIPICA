@@ -974,7 +974,8 @@ section::after, header.hero::after {
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.5px;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  text-align: center;
 }
 
 .bonus-grid {
