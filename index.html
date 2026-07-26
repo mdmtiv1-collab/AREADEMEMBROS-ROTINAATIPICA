@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotina Atípica | Área de Membros</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="topbar">
+    <div class="container topbar-container">
+      <div class="logo">
+        <span class="logo-icon">🧩</span>
+        <div class="logo-text">
+          <h1>Rotina Atípica</h1>
+          <span class="logo-sub">Biblioteca de Atividades Adaptadas</span>
+        </div>
+      </div>
+      <div class="user-profile">
+        <span class="badge-status">Acesso Vitalício</span>
+        <div class="avatar">RA</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Header -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Sua Biblioteca Organizada de Atividades</h2>
+      <p>Acesse rapidamente as atividades adaptadas do seu acervo organizadas por categoria real.</p>
+    </div>
+  </section>
+
+  <!-- Main Content Layout -->
+  <main class="container main-content">
+
+    <!-- Filters Section -->
+    <aside class="filters-sidebar">
+      <div class="filter-card">
+        <h3>🔍 Filtrar Material</h3>
+        
+        <div class="filter-group">
+          <label for="search-input">Buscar por Nome</label>
+          <input type="text" id="search-input" placeholder="Ex: Sombra, TDAH, Dominó...">
+        </div>
+
+        <div class="filter-group">
+          <label>Módulo Principal</label>
+          <div class="filter-options" id="module-filters">
+            <button class="filter-btn active" data-module="all">Todos os Módulos (27)</button>
+            <button class="filter-btn" data-module="atipicas">🧩 Material Atípico (12)</button>
+            <button class="filter-btn" data-module="coordenacao">✋ Coordenação Motora (6)</button>
+            <button class="filter-btn" data-module="percepcao">👁️ Percepção Visual (14)</button>
+            <button class="filter-btn" data-module="adaptadas">📘 Apostilas Adaptadas (3)</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label for="type-select">Tipo de Atividade</label>
+          <select id="type-select">
+            <option value="all">Todos os Tipos</option>
+            <option value="Apostila">Apostila Completa</option>
+            <option value="Jogo">Jogos e Pareamento</option>
+            <option value="Leitura">Leitura & Alfabetização</option>
+            <option value="Motora">Coordenação & Grafomotricidade</option>
+            <option value="Adaptado">Cadernos Adaptados Especializados</option>
+          </select>
+        </div>
+
+        <div class="drive-banner">
+          <h4>📁 Pastas Diretas do Drive</h4>
+          <p>Links para acessar suas pastas de origem:</p>
+          <a href="https://drive.google.com/drive/folders/1hIv4SCld794Cq9XRKCVJphpAU2c2Xnq0" target="_blank" class="drive-link">📂 Material Atípico</a>
+          <a href="https://drive.google.com/drive/folders/1qvTzUtes8XxlGeVeH5EWCzGVjX8yz3B9" target="_blank" class="drive-link">📂 Coordenação Motora</a>
+          <a href="https://drive.google.com/drive/folders/12uNgddHlA-ovE1yh2RsTJcuZjn75-Jgv" target="_blank" class="drive-link">📂 Percepção Visual</a>
+          <a href="https://drive.google.com/drive/folders/1gyzCgOjWzHHKBKjPt4HCczE0cnnZyuvj" target="_blank" class="drive-link">📂 Apostilas Adaptadas</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Activity Cards Grid -->
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <span id="results-count">Exibindo 27 de 27 materiais</span>
+      </div>
+
+      <div class="cards-grid" id="cards-grid">
+        <!-- Cards will be generated dynamically by JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Ficha Pedagógica -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-header">
+        <span class="modal-badge" id="modal-badge">Módulo</span>
+        <h3 id="modal-title">Título do Arquivo</h3>
+      </div>
+      <div class="modal-body">
+        <div class="ficha-row">
+          <strong>📂 Pasta Origem:</strong> <span id="modal-folder">Google Drive</span>
+        </div>
+        <div class="ficha-row">
+          <strong>🎯 Foco Pedagógico:</strong> <span id="modal-foco">Descrição do foco</span>
+        </div>
+        <div class="ficha-box">
+          <h4>💡 Como Aplicar em Casa ou na Escola:</h4>
+          <p id="modal-instrucoes">Orientações diretas de uso.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a id="modal-download" href="#" target="_blank" class="btn-primary">
+          ⬇️ Abrir Arquivo no Google Drive
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
